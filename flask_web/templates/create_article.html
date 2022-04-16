@@ -5,16 +5,25 @@
 {% endblock %}
 
 {% block body %}
-<div class="container mt-2">
-  <h1>Создание статьи</h1>
-  <form method="post">
-    <div class="alert alert-dark">
-      <input type="text" name="title" id="title" class="from-control" placeholder="Введите название статьи"><br>
-      <textarea name="intro" id="intro" class="from-control" placeholder="Введите описание статьи"></textarea><br>
-      <textarea name="text" id="text" class="from-control" placeholder="Введите текст статьи"></textarea><br>
-    <input type="submit" class="btn btn-primary" value="Отправить">
-      <a href="/posts" class="btn btn-danger">Отменить</a>
-    </div>
-  </form>
+<div class="container">
+<h1>Создание статьи</h1>
+<form method="post">
+  <div class="form-group">
+    <label for="title">Название статьи</label>
+    <input type="text" class="form-control" name="title" id="title" placeholder="Введите название статьи">
+    <small class="form-text text-muted">Оно может быть каким угодно, вы всегда можете его изменить.</small>
+  </div>
+  <div class="form-group">
+    <label>Описание статьи</label>
+      <textarea class="form-control" name="intro" id="intro" placeholder="Введите описание статьи"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Описание статьи</label>
+      <textarea class="form-control" name="text" id="text" placeholder="Введите текст статьи"></textarea>
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Выложить">
+    <a href="/posts" class="btn btn-danger">Отменить</a>
+</form>
 </div>
 {% endblock %}

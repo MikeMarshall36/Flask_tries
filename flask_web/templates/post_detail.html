@@ -5,15 +5,20 @@
 {% endblock %}
 
 {% block body %}
-<div class="container mt-3">
-  <h1>{{ article.title }}</h1>
-
-  <div class="alert alert-dark">
-    <h3>{{ article.intro }}</h3>
-    <p>{{ article.text }}</p>
-    <p><b>Дата: {{ article.date.date()}}</b></p>
-    <a href="/posts/{{ article.id }}/delete" class="btn btn-danger">Удалить</a>
-    <a href="/posts/{{ article.id }}/update" class="btn btn-warning">Изменить</a>
+<div class="container">
+</div><br>
+<div class="container">
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">{{ article.title }}</h1>
+      <p class="lead my-3">{{ article.intro }}</p>
+      <p class="lead mb-0">{{ article.text }}</p>
+    </div>
+  <p><b>Дата: {{ article.date.date()}}</b></p>
+  <a href="/posts/{{ article.id }}/delete" class="btn btn-outline-danger btn-sm">Удалить</a>
+    <a href="/posts/{{ article.id }}/update" class="btn btn-outline-warning btn-sm">Изменить</a>
   </div>
+
 </div>
+
 {% endblock %}
