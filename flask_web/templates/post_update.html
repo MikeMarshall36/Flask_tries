@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Редактор статьи
+{% endblock %}
+
+{% block body %}
+<div class="container mt-3">
+  <h1>Изменение статьи</h1>
+  <form method="post">
+    <div class="alert alert-dark">
+      <input type="text" name="title" id="title" class="from-control" value="{{ article.title }}" placeholder="Введите название статьи"><br>
+      <textarea name="intro" id="intro" class="from-control" placeholder="Введите описание статьи">{{ article.intro }}</textarea><br>
+      <textarea name="text" id="text" class="from-control" placeholder="Введите текст статьи">{{ article.text }}</textarea><br>
+    <input type="submit" class="btn btn-primary" value="Принять изменения">
+      <a href="/posts" class="btn btn-danger">Отменить</a>
+
+    </div>
+  </form>
+</div>
+{% endblock %}
